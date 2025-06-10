@@ -1,0 +1,181 @@
+/* 全局样式重置 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ant Design 样式覆盖 */
+.ant-layout-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-form-item-label > label {
+  font-weight: 600;
+}
+
+.ant-btn-primary {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background: #40a9ff;
+  border-color: #40a9ff;
+}
+
+/* 自定义样式 */
+.field-card {
+  transition: all 0.3s ease;
+}
+
+.field-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.loading-overlay {
+  position: relative;
+}
+
+.success-message {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .ant-layout-content {
+    padding: 16px !important;
+  }
+  
+  .ant-col {
+    margin-bottom: 16px;
+  }
+}
+
+/* 表单样式优化 */
+.ant-form-item {
+  margin-bottom: 20px;
+}
+
+.ant-input,
+.ant-input-number {
+  border-radius: 6px;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* 按钮样式 */
+.ant-btn {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.ant-btn-lg {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 16px;
+}
+
+/* 字段表单优化样式 */
+.field-form-container {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.field-item {
+  margin-bottom: 16px;
+}
+
+.field-label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.required-field {
+  font-weight: 600;
+}
+
+.field-type-tag {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* 响应式布局优化 */
+@media (max-width: 1200px) {
+  .field-col-large {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .field-col-large {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* 表单输入框优化 */
+.ant-input, .ant-input-number {
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.ant-input:focus, .ant-input-number:focus {
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* 字段分组样式 */
+.field-group {
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: #fff;
+}
+
+.field-group-title {
+  font-weight: 600;
+  color: #1890ff;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
